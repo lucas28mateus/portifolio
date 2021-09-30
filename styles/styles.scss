@@ -1,0 +1,246 @@
+@import './global.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--opacity);
+
+  header {
+    display: flex;
+    align-items: center;
+    min-width: 80%;
+    margin: 2.3rem auto;
+    padding: 0 2rem;
+
+    .logo {
+      margin-right: 3rem;
+      padding: 2rem 1.5rem;
+      background-color: var(--rocket);
+      clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+      );
+
+      p {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+
+    .title {
+      h2 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2;
+      }
+
+      p {
+        font-size: 1.4rem;
+        color: var(--ligth);
+      }
+    }
+  }
+}
+
+main {
+  section {
+    width: 80%;
+    padding: 4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text-info {
+      width: 60%;
+      align-items: center;
+      padding: 2rem;
+
+      h1 {
+        font-size: 2.3rem;
+        line-height: 2;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      p {
+        font-size: 1.7rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        color: var(--ligth);
+      }
+
+      .separator {
+        width: 20%;
+        border: 1px solid var(--rocket);
+        margin-top: 3rem;
+      }
+
+      .social-networks {
+        a {
+          display: inline-block;
+          margin-top: 4rem;
+          margin-left: 1.3rem;
+          transition: 0.3s;
+          i {
+            font-size: 2.2rem;
+          }
+        }
+
+        a:hover {
+          transform: translateY(-15px);
+        }
+      }
+    }
+
+    .profile {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 2.4rem;
+      padding: 2rem;
+
+      .image {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 4px solid var(--green-ligth);
+        margin-bottom: 2.3rem;
+        .img-user {
+          height: 24rem;
+          width: 24rem;
+
+          border-radius: 50%;
+        }
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .my-projets {
+    flex-direction: column;
+    position: relative;
+    h2 {
+      font-size: 2.2rem;
+      color: var(--cyan);
+    }
+
+    nav {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 3rem;
+      align-items: center;
+      margin-top: 3rem;
+
+      a {
+        display: block;
+        font-size: 1.8rem;
+        background-color: var(--rocket);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        margin-right: 3rem;
+        transition: 0.3s;
+      }
+
+      .projects:hover {
+        background-color: var(--cyan);
+      }
+
+      .projects.active {
+        background-color: var(--cyan);
+      }
+
+      .Master:hover {
+        background-color: var(--green-ligth);
+      }
+
+      .Master.active {
+        background-color: var(--green-ligth);
+      }
+    }
+
+    .container-image {
+      margin-top: 3rem;
+      column-count: 3;
+      column-gap: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(30px);
+      transition: 0.4s;
+
+      figure {
+        margin: 0;
+        display: flex;
+        margin-bottom: 10px;
+        break-inside: avoid;
+
+        img {
+          width: 100%;
+          border-radius: 13px;
+        }
+      }
+    }
+
+    .container-image.show {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-30px);
+    }
+
+    .Technologys {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 100;
+      top: 16rem;
+      width: 100%;
+      padding: 2rem 3rem;
+      opacity: 0;
+      transform: translateX(-50%);
+      visibility: hidden;
+      transition: 0.4s;
+
+      .card {
+        background-color: var(--dark-rocket);
+        margin: 0 5rem;
+        width: 40%;
+        padding: 2.5rem 1.4rem;
+        border-radius: 10px;
+
+        h1 {
+          font-size: 2rem;
+          font-family: 'Roboto', sans-serif;
+          margin-bottom: 2.5rem;
+        }
+
+        i {
+          display: inline-block;
+          font-size: 3.2rem;
+          margin-right: 1.6rem;
+          transition: 0.3s;
+        }
+
+        i:hover {
+          transform: translateY(-15px);
+        }
+      }
+    }
+
+    .Technologys.show {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(50px);
+    }
+  }
+}
